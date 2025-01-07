@@ -55,6 +55,12 @@ To ensure the smooth functioning and optimal performance of the SOC Automation s
    - Configure Wazuh and TheHive servers and endpoints.
    - Ensure both systems are communicating and processing telemetry.
    - [Watch Configuration Video](https://youtu.be/VuSKMPRXN1M?si=53MFANru39zZFO-0)
+   - [/etc/cassandra/cassandra.yaml](https://github.com/Mitesh2020/SOC-Automation-Project/blob/main/cassandra.yaml)
+   - [/etc/elasticsearch/elasticsearch.yml](https://github.com/Mitesh2020/SOC-Automation-Project/blob/main/elasticsearch.yml)
+   - [/etc/thehive/application.conf](https://github.com/Mitesh2020/SOC-Automation-Project/blob/main/application.conf)
+   - [/etc/elasticsearch/jvm.options.d/jvm.options](https://github.com/Mitesh2020/SOC-Automation-Project/blob/main/jvm.options%20for%20TheHive)
+   - [/etc/wazuh-indexer/jvm.options](https://github.com/Mitesh2020/SOC-Automation-Project/blob/main/jvm.options%20for%20Wazuh)
+
 
 4. **Day 4 - Telemetry:**
    - Generate telemetry using Mimikatz at endpoints.
