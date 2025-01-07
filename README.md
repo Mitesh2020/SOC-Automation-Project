@@ -2,44 +2,61 @@
 This project automates SOC workflows using open-source tools like Wazuh, Shuffle, and TheHive. It aims to streamline event collection, alerting, and incident response to enhance SOC efficiency.
 
 ## Project Design
+The project integrates multiple tools and systems to automate and enhance SOC operations. Below is the design layout for reference:
+
 ![design](https://github.com/user-attachments/assets/d3349ba6-9ddb-4817-894a-0e131a30c6cc)
 
-## Tools/Software Installation
+## System Requirements
+To ensure the smooth functioning and optimal performance of the SOC Automation system, the following system requirements must be met:
 
-1. **Installed VMware or Virtual Box**.
-2. **Downloaded Windows 10 Pro ISO file** for using it as a Wazuh agent.
-3. **Installed Sysmon with its configuration file (.xml)** in the Windows 10 Pro VM.
-4. **Installed Ubuntu 18.04.6 LTS** from Microsoft Store and set up Wazuh in it.
-5. **Installed Ubuntu 20.04.6 LTS** from Microsoft Store and set up TheHive with dependencies including Elasticsearch, Java, Cassandra, and TheHive itself.
+| Requirement      | Specification                    |
+|------------------|----------------------------------|
+| **Storage**      | 150 GB (SSD Recommended)        |
+| **RAM**          | 32 GB (Cloud PC Recommended for < 32 GB RAM) |
+| **OS**           | Windows 11 (Primary)            |
 
-## Things to Remember
-1. **Internet Connection**: Virtual machines should be connected to the internet to access them using their IP addresses.
-2. **Wazuh Setup**: A minimum of 8GB RAM and 50GB HDD/SSD space is required for the Wazuh setup.
-3. **Firewall Rules**: Firewall rules must be altered to access port 443 for the Wazuh dashboard using UFW in Ubuntu.
+## Software/Tools Usage
 
-## Shortcut to Search Any Word in Nano Editor
-Hold `Ctrl + w`
+| Name                       | Usage                                                                 |
+|----------------------------|-----------------------------------------------------------------------|
+| **VMware/VirtualBox**      | Virtualization software for creating and managing virtual machines.  |
+| **Windows 11**             | Primary operating system serving as the Wazuh agent host.            |
+| **Ubuntu Server 22.04**    | Lightweight OS for hosting Wazuh and TheHive on separate VMs.        |
+| **Sysmon**                 | Windows system monitor for detailed logging of process activities.   |
+| **Mimikatz**               | Penetration testing tool to simulate security breaches.              |
+| **SquareX**                | Browser extension for disposable email usage.                        |
+| **Draw.io**                | Tool for creating project architecture and design diagrams.          |
+| **Wazuh Manager**          | Centralized agent-based monitoring and analysis solution.            |
+| **Wazuh Dashboard**        | Visualization and management interface for Wazuh.                   |
+| **Wazuh Indexer**          | Backend storage and search engine for Wazuh.                        |
+| **TheHive**                | Incident response platform for managing alerts and cases.            |
+| **Cassandra**              | Database used as a backend for TheHive.                             |
+| **Elasticsearch**          | Search engine for indexing and querying TheHive data.               |
+| **VirusTotal**             | Online file and URL analysis service for threat detection.          |
+| **Ngrok**                  | Port forwarding to connect local TheHive setup with Shuffle cloud.  |
+| **UFW**                    | Firewall configuration to manage network traffic.                   |
+| **Shuffler.io**            | Workflow automation platform for SOC processes.                     |
 
-## Configure TheHive
-1. Replace localhost address with the IP address of the VM on which TheHive is set up in `Cassandra.yaml` file.
-2. Replace seed from `localhost:7000` to `"IP address of VM on which TheHive is set up":7000` in `Cassandra.yaml` file.
-3. Stop Cassandra service & remove old files located at `/var/lib/Cassandra/*`.
-4. Start Cassandra service & check the status to ensure it is active.
-5. Uncomment `cluster.name` in `elasticsearch.yml` file and replace value `my-application` with `thehive`.
-6. Uncomment `node.name` without changing its value, and uncomment `network.host`, replacing it with the IP address of the VM on which TheHive is set up.
-7. Uncomment `http.port` without changing its value, and uncomment `cluster.initial_master_nodes`, removing `"node-2"` as it's a demo environment.
-8. Start and enable the Elasticsearch service, checking its status to ensure it is active.
-9. Check file ownership for TheHive with `ls -la /opt/thp`, change owner to thehive user & group with `chown -R thehive:thehive /opt/thp`.
-10. Replace localhost IP address with the IP address of the VM on which TheHive is set up in TheHive's `application.conf` file.
-11. Replace `cluster-name` value with `"thp"` in `Cassandra.yaml` file.
-12. Again, replace localhost IP address (2nd occurrence) with the IP address of the VM on which TheHive is set up in `application.conf` file.
-13. Replace `application.baseUrl` value with `http://"IP address of VM on which TheHive is set up":9000`.
-14. Start and enable TheHive service, checking its status to ensure it is active.
-15. Login with `http://"IP address of VM on which TheHive is set up":9000` using default credentials `admin@thehive.local:secret`.
+## Project Workflow
 
-## Configure Wazuh
-1. Open the second Ubuntu instance where Wazuh is set up and open Wazuh dashboard in the browser of Windows 10 Pro VM.
-2. Deploy a new agent and copy/paste the given command to execute in the required agent system (i.e., Windows 10 Pro VM).
+1. **Day 1 - Design:**
+   - Create a logical diagram of the project using [draw.io](https://app.diagrams.net/).
+   - Diagram includes the architecture and flow between Wazuh, TheHive, Shuffle, and email.
 
-## Things to Remember
-1. Allow port 1514 & 1515 for communication between Wazuh and the deployed agent (Windows 10 Pro VM). Configure the firewall rule in the Ubuntu instance where Wazuh is set up.
+2. **Day 2 - Install:**
+   - Install Wazuh and TheHive on an Ubuntu Server VM.
+   - Set up virtual machines and install the required applications.
+
+3. **Day 3 - Configure:**
+   - Configure Wazuh and TheHive servers and endpoints.
+   - Ensure both systems are communicating and processing telemetry.
+
+4. **Day 4 - Telemetry:**
+   - Generate telemetry using Mimikatz at endpoints.
+   - Trigger and ingest telemetry into Wazuh for analysis.
+
+5. **Day 5 - SOAR:**
+   - Create an automated workflow between Wazuh, TheHive, Shuffle, and email to notify SOC analysts when alerts are triggered.
+   - The workflow will automatically send alerts to TheHive and email them to SOC analysts.
+
+
