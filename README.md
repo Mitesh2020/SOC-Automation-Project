@@ -50,6 +50,8 @@ To ensure the smooth functioning and optimal performance of the SOC Automation s
    - Install Wazuh and TheHive on an Ubuntu Server VM.
    - Set up virtual machines and install the required applications.
    - [Watch Installation Video](https://youtu.be/YxpUx0czgx4?si=exsKXJJdOqT08mO2)
+   - [Download Sysmon for Windows 10/11](https://learn.microsoft.com/en-us/sysinternals/downloads/sysmon)
+   - [Download sysmonconfig.xml file](https://github.com/olafhartong/sysmon-modular/blob/master/sysmonconfig.xml)
 
 3. **Day 3 - Configure:**
    - Configure Wazuh and TheHive servers and endpoints.
@@ -66,10 +68,13 @@ To ensure the smooth functioning and optimal performance of the SOC Automation s
    - Generate telemetry using Mimikatz at endpoints.
    - Trigger and ingest telemetry into Wazuh for analysis.
    - [Watch Telemetry Generation Video](https://youtu.be/amTtlN3uvFU?si=tTBudwOKH0LZ0u53)
+   - [Download Mimikatz](https://github.com/gentilkiwi/mimikatz/releases)
 
 5. **Day 5 - SOAR:**
    - Create an automated workflow between Wazuh, TheHive, Shuffle, and email to notify SOC analysts when alerts are triggered.
    - The workflow will automatically send alerts to TheHive and email them to SOC analysts.
    - [Watch SOAR Automation Video](https://youtu.be/GNXK00QapjQ?si=za-3VrnxoaA07XcJ)
+   - [Create Account on Shuffle](https://shuffler.io/)
+   - [Create Account on VirusTotal](https://www.virustotal.com/)
 
 
