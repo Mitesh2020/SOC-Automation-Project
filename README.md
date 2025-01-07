@@ -73,6 +73,8 @@ To ensure the smooth functioning and optimal performance of the SOC Automation s
 5. **Day 5 - SOAR:**
    - Create an automated workflow between Wazuh, TheHive, Shuffle, and email to notify SOC analysts when alerts are triggered.
    - The workflow will automatically send alerts to TheHive and email them to SOC analysts.
+   - Fork thehive app to configure create alert api from **/api/v1/alert** to **/api/alert**.
+   - Create an account on https://ngrok.com/ for port forwarding thehive local setup as Shuffle is unable to send alerts to our local setup thehive from Cloud Shuffle setup.
    - [Watch SOAR Automation Video](https://youtu.be/GNXK00QapjQ?si=za-3VrnxoaA07XcJ)
    - [Create Account on Shuffle](https://shuffler.io/)
    - [Create Account on VirusTotal](https://www.virustotal.com/)
@@ -90,7 +92,7 @@ To ensure the smooth functioning and optimal performance of the SOC Automation s
 - This component extracts **SHA256 hash values** from the alerts, which are crucial for identifying files involved in the potential threats.
 
 ### Step 3: Alert Notification (Email)
-- If a threat is identified, an **email notification** (Email 1) is automatically sent out.
+- An **email notification** (Email 1) is automatically sent out if a threat is identified.
 - The email alerts the relevant parties (e.g., security analysts or response teams) to investigate the potential threat.
 
 ### Step 4: Malware Analysis with VirusTotal
