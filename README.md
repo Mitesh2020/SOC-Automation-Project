@@ -102,6 +102,37 @@ To ensure the smooth functioning and optimal performance of the SOC Automation s
 ### Step 5: Incident Management in TheHive 5
 - Based on the results from **VirusTotal**, an **incident** is automatically created in **TheHive 5**.
 - Security analysts and response teams can investigate and respond to the incident within **TheHive 5**, which provides tools for managing and tracking the progress of investigations.
+<br><br><br>
+## Project Walkthrough
+[Video](https://drive.google.com/file/d/189fVVeOxxMuutrBilmezgOoQUuwY-hWo/view?usp=sharing)
+<br><br><br>
+## Learnings  
+
+While working on this project, I gained valuable knowledge and skills, including:  
+
+1. *SIEM and XDR*: Learned about SIEM and XDR concepts using Wazuh.  
+2. *Case Management*:  
+    - Explored case management systems through TheHive.  
+    - Learned about backend database systems like Elasticsearch and Cassandra, which power TheHive.  
+3. *SOAR*:  
+    - Understood SOAR workflows by integrating Shuffle.  
+    - Built integrations between Wazuh, Shuffle, TheHive, and VirusTotal:  
+        - *Wazuh*: Generates alerts for potential security events.  
+        - *Shuffle*: Automates workflows, such as sending Wazuh alerts to TheHive for case management.  
+        - *TheHive*: Manages cases for incidents triggered by Wazuh alerts.  
+        - *VirusTotal*: Provides file and URL reputation analysis for enhanced incident investigation.  
+    - *Email Integration*: Configured email notifications in Shuffle to send alerts directly to SOC analysts, ensuring they are informed in real-time about critical security events.  
+4. *Virtual Machine Configurations*: Configured virtual machines, including network adapters, memory, CPU cores, and storage.  
+5. *Firewall Configuration*: Set up and managed firewalls using UFW.  
+6. *Security Breach Simulation*: Simulated security breaches using Mimikatz.  
+7. *Port Forwarding*: Learned port forwarding through Ngrok to connect TheHive (local) with Shuffle (cloud).  
+8. *System Monitoring*: Understood system monitoring mechanisms with Sysmon.  
+9. *Memory Management*: Managed memory resources effectively while running resource-heavy servers like Wazuh and TheHive alongside testing on Windows 11.  
+10. *Patience and Research*:  
+    - Faced several challenges, such as memory shortages, dependency issues, networking errors, and firewall configuration problems.  
+    - Kept patience, researched solutions, and overcame frustrations.  
+    - Initially expected to complete the project in 7 days, but it took 14 days due to unforeseen difficulties.  
+11. *Helping Others*: Created this GitHub repository to document my learnings and help others save time and effort when building a similar project.  
 
 
 
