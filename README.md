@@ -131,8 +131,12 @@ While working on this project, I gained valuable knowledge and skills, including
 10. *Patience and Research*:  
     - Faced several challenges, such as memory shortages, dependency issues, networking errors, and firewall configuration problems.  
     - Kept patience, researched solutions, and overcame frustrations.  
-    - Initially expected to complete the project in 7 days, but it took 14 days due to unforeseen difficulties.  
-11. *Helping Others*: Created this GitHub repository to document my learnings and help others save time and effort when building a similar project.  
+    - The project was initially expected to be completed in 7 days, but due to unforeseen difficulties, it took 14 days.  
+11. *Helping Others*: I created this GitHub repository to document what I have learned and help others save time and effort when building a similar project.  
+<br><br><br>
+## Contact  
 
+If you have any queries or need assistance with the project, feel free to reach out:  
+**Email:** [miteshofficial007@gmail.com](mailto:miteshofficial007@gmail.com)
 
 
